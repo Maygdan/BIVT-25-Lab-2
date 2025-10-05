@@ -37,28 +37,18 @@ namespace Lab2
         {
            
 
-            int a1 = 2, a2 = 3, a3 = 3;
-            int b1 = 1, b2 = 2, b3 = 3;
-            
-            double current = (double)a2 / b2;
-            double prev = (double)a1 / b1;
-            double next = a3 / b3;
-            while (Math.Abs(next - current) < E)
+            double a1 = 1;
+            double a2 = 1;
+            double a3 = a1 + a2;
+
+            while (Math.Abs(a1 / a2 - a3 / a1) > E)
             {
-                int a4 = a1 + a2;
-                int b4 = b1 + b2;
-
-
-
-                a1 = a2; a2 = a4;
-                b1 = b2; b2 = b4;
-                prev = current;
-                current = next;
-
+                a2 = a1;
+                a1 = a3;
+                a3 = a1 + a2;
             }
-            ;
-
-            return current;
+            Console.WriteLine(a3 / a1);
+            return a3 / a1;
         }
         public int Task4(double b, double q)
         {
