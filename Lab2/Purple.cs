@@ -111,25 +111,28 @@ namespace Lab2
         {
             double SS = 0;
             double SY = 0;
+            int n = (int)Math.Round((b - a) / h);
 
-            for (double x = a; x <= b; x += h)
-    {
-        double S = 0;
-        double term = 1; 
-        int i = 0;
+            for (int k = 0; k <= n; k++)
+                {
+                double x = a + k * h;
+                double S = 0;
+                double term = 1;
+                int i = 0;
 
-        while (Math.Abs(term) >= 0.0001)
-        {
-            S += term;
-            i++;
-            term = term * (-1) * x * x / ((2 * i - 1) * (2 * i));
-        }
+                while (Math.Abs(term) >= 0.00001) // более строгая точность для членов
+                {
+                 S += term;
+                 i++;
+                 term = term * (-1) * x * x / ((2 * i - 1) * (2 * i));
+                }
 
-        SS += S;
-        SY += Math.Cos(x);
-    }
-        
-            return (SS, SY);
-        }
-    }
-}
+                SS += S;
+                SY += Math.Cos(x);
+                    }
+
+                return (SS, SY);
+
+                }
+            }
+        }   
