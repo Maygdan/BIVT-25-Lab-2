@@ -13,8 +13,8 @@ namespace Lab2
         {
             int answer = 0;
             for (int i = 0; i < n; i++) {
-                answer += (int)Math.Pow((p + i * h), 2);
-            };
+                answer += (p + i * h)*(p + i * h);
+            }
             return answer;
 
 
@@ -28,7 +28,7 @@ namespace Lab2
             while (remainder >= b)
     {
         remainder -= b;
-        quotient++;
+        quotient+=1;
     }
 
             return (quotient, remainder);
@@ -47,7 +47,10 @@ namespace Lab2
                 int b3 = b1 + b2;
                 double next = a3 / b3;
                 if (Math.Abs(next - current) < E)
+                {
                     break;
+                };
+                    
 
                 a1 = a2; a2 = a3;
                 b1 = b2; b2 = b3;
@@ -64,7 +67,7 @@ namespace Lab2
             for (double i = 0; Math.Abs(b * q * i) > E; i *= q)
             {
                 answer += 1;
-            };
+            }
             return answer+1;
         }
         public int Task5(int a, int b)
@@ -75,12 +78,12 @@ namespace Lab2
             {
                 number *= b;
                 b--;
-            };
+            }
             while(number >= 10)
                 {
                     number /= 10;
                     answer++;
-                };
+                }
             return answer;
             
 
@@ -91,7 +94,7 @@ namespace Lab2
             for (int i = 0; i < 64; i++)
             {
                 answer *= 2;
-            };
+            }
             answer -= 1;
             double res = (double) answer / 15_000_000.0;
             return (long)Math.Floor(res);
@@ -108,7 +111,7 @@ namespace Lab2
     {
         currentSum += currentSum * m;
         answer++;
-    };
+    }
 
     return answer;
         }
@@ -128,7 +131,7 @@ namespace Lab2
             S += term;
             i++;
             term = term * (-1) * x * x / ((2 * i - 1) * (2 * i));
-        };
+        }
 
         SS += S;
         SY += Math.Cos(x);
