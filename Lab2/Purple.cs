@@ -97,8 +97,12 @@ namespace Lab2
             double s = i*(d / 1200.0);
             while (c < 2 * i)
             {
-                c += c + s;
-                answer ++;
+                if (answer % 12 == 0)
+                {
+                    s = c * (d / 1200.0);
+                }
+                c += s;
+                answer++;
             }
 
                 return answer;
