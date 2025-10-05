@@ -64,7 +64,7 @@ namespace Lab2
         public int Task4(double b, double q)
         {
             int answer = 1;
-            for (double i = 0; Math.Abs(b * q * i) > E; i *= q)
+            for (double i = 1; Math.Abs(b * q * i) > E; i *= q)
             {
                 answer += 1;
             }
