@@ -11,10 +11,6 @@ namespace Lab2
         public double Task1(int n, double x)
         {
             double answer = 0;
-            for (int i = 0; n != i; i++)
-            {
-            
-            }
             
 
             return answer;
@@ -93,4 +89,5 @@ namespace Lab2
             return (SS, SY);
         }
     }
+
 }
