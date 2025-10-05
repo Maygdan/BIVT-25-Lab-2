@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 
 namespace Lab2
 {
@@ -10,10 +11,11 @@ namespace Lab2
         public double Task1(int n, double x)
         {
             double answer = 0;
-
-            // code here
-
-            // end
+            for (int i = 0; n != i; i++)
+            {
+            
+            }
+            
 
             return answer;
         }
