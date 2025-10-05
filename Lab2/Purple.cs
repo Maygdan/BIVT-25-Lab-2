@@ -92,17 +92,16 @@ namespace Lab2
         public int Task7(double S, double d)
         {
             int answer = 0;
-        double currentSum = S;
-        double initialS = S;
-        double m = d / 1200.0;
+            double c = S;
+            double i = S;
+            double s = d / 1200.0;
+            while (c < 2 * i)
+            {
+                c += c + s;
+                answer += 1;
+            }
 
-        while (currentSum < 2 * initialS)
-    {
-        currentSum += currentSum * m;
-        answer++;
-    }
-
-    return answer;
+                return answer;
         }
         public (double SS, double SY) Task8(double a, double b, double h)
         {
